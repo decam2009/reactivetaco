@@ -1,0 +1,7 @@
+spring:
+  data:
+    cassandra:
+      port: 9042
+      contact-points: localhost
+      keyspace-name: taco
+      schema-action: CREATE_IF_NOT_EXIST
