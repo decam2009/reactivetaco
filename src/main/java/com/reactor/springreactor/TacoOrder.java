@@ -15,13 +15,13 @@ public class TacoOrder {
 
   @NotBlank(message = "Delivery name is required")
   private String deliveryName;
-  @NotBlank (message = "Delivery street is required")
+  @NotBlank(message = "Delivery street is required")
   private String deliveryStreet;
-  @NotBlank (message = "Delivery city is required")
+  @NotBlank(message = "Delivery city is required")
   private String deliveryCity;
-  @NotBlank (message = "Delivery state is required")
+  @NotBlank(message = "Delivery state is required")
   private String deliveryState;
-  @NotBlank (message = "Delivery zip is required")
+  @NotBlank(message = "Delivery zip is required")
   private String deliveryZip;
   @CreditCardNumber(message = "Not a valid credit card number")
   private String ccNumber;
@@ -31,5 +31,9 @@ public class TacoOrder {
   private String ccCVV;
 
   private List<Taco> tacos = new ArrayList<>();
+
+  public void addTaco(Taco taco) {
+    this.tacos.add(taco);
+  }
 
 }

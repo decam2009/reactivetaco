@@ -10,8 +10,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor (force = true, access = AccessLevel.PROTECTED)
 public class Ingredient {
 
-  private Long id;
-  private String name;
+  private final String id;
+  private final String name;
+  private final Type type;
 
   public enum Type {WRAP, PROTEIN, VEGGIES, CHEESE, SAUCE};
 
